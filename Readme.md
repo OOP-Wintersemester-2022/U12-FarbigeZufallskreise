@@ -1,34 +1,24 @@
----
-title: Template
-author: Zuletzt bearbeitet von Alexander Bazo
-documentclass: scrartcl
-classoption:
-  - a4paper
-header-includes: |
-    \usepackage{german} 
-    \usepackage[a4paper,left=2.5cm, right=2.5cm,top=2.5cm, bottom=3cm]{geometry}
-    \usepackage{fancyhdr}
-    \usepackage{graphicx}
-    \pagestyle{fancy}
-    \fancyhf{}
-    \rhead{OOP WS 2020/21}
-    \lhead{U00 | Template}
-    \cfoot{\includegraphics[height=2cm]{docs/footer.png}}
-    \fancypagestyle{plain}{
-      \fancyhf{}
-      \rhead{OOP WS 2020/21}
-      \lhead{U00 | Template}
-      \cfoot[C]{\includegraphics[height=2cm]{docs/footer.png}}}
----
+# U12 | Farbige Zufallskreise
 
+Entwickeln Sie eine `GraphicsApp`, die 100 farbige Kreise auf der
+Zeichenfläche darstellt. Jeder der Kreise hat eine zufällige Farbe,
+einen zufälligen Durchmesser zwischen 5 und 50 Pixeln und eine zufällige
+Position auf der Zeichenfläche. Die Kreise müssen alle innerhalb der
+Zeichenfläche dargestellt werden. Verwenden Sie die in der Vorlesung
+vorgestellte Klasse `Random` um alle Zufallswerte zu erzeugen.
 
-# Template für Übungsaufgaben 
+| So sollen die Zufallskreise aussehen |
+|:----:|
+| ![Random Circles](./docs/screenshot_randomCircles.png) |
 
-## Wichtige Informationen zur Bearbeitung der Aufgabe 
- - [Link zu wichtiger Ressource](https://www.uni-regensburg.de/sprache-literatur-kultur/medieninformatik/)
+Implementieren Sie eine eigene Methode pro zufälliger Eigenschaft der
+Kreise und speichern Sie den Rückgabewert in einer lokalen Variable,
+bevor Sie den Konstruktor der Klasse Ellipse aufrufen:
 
-## Starterpaket
+-   `private Color getNextColor()`
 
-Ein vorbereitetes Starterpaket zur selbständigen Implementierung der Aufgabe finden Sie [hier](https://github.com/OOP-Ubungen-WS2020-21/U00-Template-fuer-Aufgaben/archive/Starterpaket.zip).
+-   `private Point getNextPoint()`
 
-## Text
+-   `private int getNextDiameter()`
+
+Verwenden Sie (wie immer) geeignete Konstanten, um unveränderliche Werte abzuspeichern.
